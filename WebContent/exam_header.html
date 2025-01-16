@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "../js/jquery-3.7.1.min.js"></script>
+<script>
+
+	function on_the_progress() {
+	alert("준비중입니다");
+	}
+	$(function(){
+		alert("34");
+		$(".header_list > div").click(function(){
+			on_the_progress();
+		})
+		$(".study_room").click(function(){
+			 window.location.href = "http://koreastudyroom.com/login_stu.asp";
+		})
+	})
+	
+</script>
+</head>
+<style>
+@font-face {
+	font-family:MalgunGothic; src:url(font/MalgunGothic.eot);
+}
+body{
+ 	font-family:'Malgun Gothic';
+ 	height : 1200px;
+}
+.header{
+	height : 400px;
+	border-bottom : 1px solid red;
+	font-size : 13px;
+	position : relative;
+}
+.top_header{
+display : flex;
+}
+.main_header_left{
+}
+.main_header_left_logo{
+	background : url('../img/logo_new.png') no-repeat center center;
+ 	width : 102px;
+ 	height : 52px;
+ 	background : 102px 52px;
+
+}
+.main_header_left_under_font{
+	font-size : 12px;
+	color : blue;
+	font-weight : 400;
+}
+
+.main_header_right{
+	display : flex;
+	margin-left : 1465px;
+	margin-top : 18px;
+}
+.main_header_right > div{
+	margin-left : 21px;
+	border : 1px solid grey;
+	width : 60px;
+	height : 30px;
+	padding-top : 7px;
+	text-align : center;
+}
+.study_room{
+
+}
+.login{
+}
+.partici{
+}
+.header_list{
+	position : absolute;
+	display : flex;
+	right : 643px;
+	top : 191px;
+	font-weight : 500;
+	
+}
+.header_list > div{
+	margin-left : 44px;
+	font-size : 16px;
+}
+.header_list > div:hover{
+	color : 
+}
+.anounce_here:hover{
+
+}
+.it_culum:hover{
+ 	color : rgb(0,78,255);
+ 	border-bottom : 2px solid RGB(0,78,255);
+}
+.cummunity:hover{
+	 	color : rgb(0,78,255);
+ 	border-bottom : 2px solid RGB(0,78,255);
+
+}
+.project:hover{
+ 	color : rgb(0,78,255);
+ 	border-bottom : 2px solid RGB(0,78,255);
+}
+.center:hover{
+ 	color : rgb(0,78,255);
+ 	border-bottom : 2px solid RGB(0,78,255);
+}
+</style>
+<script src = "../js/jquery-3.7.1.min.js"></script>
+<script>
+</script>
+<body>
+	<div class = "header">
+		<div class = "top_header">
+			<div class = "main_header_left">
+				<div class = "main_header_left_logo"></div>
+				<div class = "main_header_left_under_font">교육브랜드 10년 연속 대상</div>
+			</div>
+			<div class = "main_header_right">
+				<div class = "study_room">스터디룸</div>
+				<div class = "login">로그인</div>
+				<div class = "partici">회원가입</div>
+			</div>
+		</div>
+	<div class = "header_list">
+		<div class = "anounce_here">아카데미소개</div>
+		<div class = "it_culum">IT 교육과정</div>
+		<div class = "culum">국비지원 과정</div>
+		<div class = "cummunity">커뮤니티</div>
+		<div class = "project">프로젝트</div>
+		<div class = "center">취업지원센터</div>
+		
+	</div>
+		
+	</div>
+	<div class = "main_base"></div>
+	<div class = "footer"></div>
+</body>
+</html>

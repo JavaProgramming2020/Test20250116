@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "../js/jquery-3.7.1.min.js"></script>
+<script>
+	$(function(){
+		$(document).ready(function () {
+	   		 $("#header").load("http://localhost:9000/exam/exam_header.html");
+	   		 $("#footer").load("http://localhost:9000/exam/exam_footer.html");
+	   		 $(".agree_content").load("../webcontent/화면구현_개인정보제공.html");
+	   		 $(".login").click(function(){
+	   			 $(".main_area").css("display" , "none");
+	   			 $(".login_area").css("display" , "block");
+	   		 })
+	   		 function on_the_progress() {
+					alert("준비중입니다");
+			}
+			$(".header_list > div").click(function(){
+				on_the_progress();
+			})
+			$(".study_room").click(function(){
+				 window.location.href = "http://koreastudyroom.com/login_stu.asp";
+			})
+	   		 $(".partici").click(function(){
+	   			 $(".main_area").css("display" , "none");
+	   			 $(".partici").css("display" , "block");
+	   		 })
+	   		 $(".login_input").on("click" , function(){
+	   			 let judge = true;
+	   			const id = $(".id_input").val().trim();
+	   			const password = $(".pass_input").val().trim();
+	   			if(name != ""){
+	   				if(password !=""){
+	   					judge = true;
+	   				}
+	   				alert("비밀번호를 입력해주세요.")
+	   			}
+	   			else{
+	   				alert("아이디를 입력해주세요.")
+	   				judge = false;
+	   			}
+	   			if(judge == true){
+		   			 const mainPageUrl = 'http://localhost:9000/exam/exam_main.html?id=${id}&password=${password}';
+	   			}
+	   		 })
+	   		 $(".submit").on("click", function() {
+	                let judge = false;
+	                if (!$(".check_button").is(":checked")) {
+	                    judge = true;
+	                }
+
+	                const requiredFields = [".name_input", "id_input", "phone_input", "eamil_input", "email"];
+	                function validateRequiredFields() {
+	                    for (let i = 0; i < requiredFields.length; i++) {
+	                        const value = $("#" + requiredFields[i]).val(); 
+	                        if (!value || value === "") {
+	                            return false; 
+	                        }
+	                    }
+	                    return true; 
+	                }
+
+
+	                if (judge) {
+	                        alert("가입되었습니다. ${name}님 안녕하세요!");
+	                        $(".main_area").css("display" , "block");
+	    	                $(".parti_input_area").css("display" , "none");
+	                    } 
+	                else{
+	                	alert("로그인에 실패 했습니다.");
+	                }
+	             
+	                }
+	   		 });
+		});
+</script>
+
+<style>
+.main_area{
+	width : 1200px;
+	display : none;
+}
+body{
+position : relative;
+}
+
+.partici_area{
+	position : absolute;
+	right : 324px;
+	top : 271px;
+	width : 788px;
+	height : 700px;
+}
+.check_agree{
+	display : flex
+}
+.check_button{
+	width : 20px;
+	height : 20px;
+}
+.
+.login_area{
+	width : 500px;
+	height : 500px;
+	position : absolute;
+	right : 709px;
+	top : 390px;
+	display : none;
+}
+.login_logo_area{
+	width : 101px;
+	height : 50px;
+}
+.input_area{
+	display : flex;
+	flex-direction : column;
+}
+.input_area > input[type = 'text']{
+	height : 42px; 
+}
+.input_area > input[type = 'password']{
+	height : 42px;
+}
+.pass_input{
+	margin-top : 19px;
+}
+.login_input{
+	margin-top : 26px;
+	height : 43px;
+}
+
+.section_one_main_banner{
+	width : 300px;
+	height : 800px;
+	background : url('../img/banner1.png') no-repeat center center;
+	background-size : 300px 800px;
+}
+.agree_content{
+	height : 150px;
+	overflow-y : scroll;
+}
+.footer_font{
+	color : #9e9e9e;
+}
+.footer_area{
+	background-color : #333333;
+}
+.fixed_area{
+	width : 84px;
+	height : 800px;
+	position : fixed;
+	top : 50%;
+	right : 13px; 
+}
+.fixed_area > div{
+	width : 84px;
+	height : 100px;
+}
+</style>
+</head>
+<body>
+<div class = "main_area">
+	<div class = "one_area">
+		<div class = "section_one_main_banner">
+		</div>
+	</div>
+	<div class = "two_area">
+		<div class = "section_two">	
+			<div class = "left_block">
+				<div class = "one_block">
+					<div class = "first_pic"></div>
+					<div class = "second_pic"></div>
+				</div>
+				<div class = "two_block">
+					<div class = "thord_pic"></div>
+					<div class = "fourth_pic"></div>
+				</div>
+			</div>
+			<div class = "right_block">
+					<div class = "one_block">
+						<div class = "first_pic"></div>
+						<div class = "second_pic"></div>
+					</div>
+					<div class = "two_block">
+						<div class = "thord_pic"></div>
+						<div class = "fourth_pic"></div>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class = "three_banner">
+			<div class = "two_banner">
+			</div>
+	</div>
+	<div class = four_banner>
+			<div class = "four_section">
+				<div class = "four_first_font"></div>
+				<div class = "four_secound_font"></div>
+				<div class = "four_section_pic">
+					<div class = "four_first"></div>
+					<div class = "four_secound"></div>
+					<div class = "four_three"></div>
+					<div class = "four_four"></div>
+				</div>
+			</div>
+	</div>
+	<div class = five_banner>
+			<div class = "five_section">
+				<div class = "five_first">
+				</div>
+				<div class = "five_pic"></div>
+			</div>
+	</div>
+</div>
+	<!-- -----------------------------------------------------로그인 -->
+	<div class = "login_area">
+		<div class = "login_logo_area"></div>
+		<div class = "input_area">
+			<input type = "text" placeholder = "아이디" class = "id_input">
+			<input type = "password" placeholder = "비밀번호" class = "pass_input">
+			<input type = "button" value = "로그인" class = "login_input">
+		</div>
+	</div>
+	<!-- -------------------------------------------------회원가입 -->
+	<div class = "partici_area">
+		<div class = "aree_area">
+			<div class = "agree_content">
+			 </div>
+			 <div class = "check_agree">
+				 <input type = "checkbox" class = "check_button"></div>
+				 <div class = "agree_kor">위 이용약관 및 보호정책에 동의합니다.</div>
+			 </div>
+	 	</div>
+	 	<div class = "parti_input_area">
+	 		<div class = "name_area">
+	 			<div class = "name_kor"></div>
+	 			<input type = "text" class = "name_input">
+	 		</div>
+	 		<div class = "id_area">
+	 			<div class = "id_kor"></div>
+	 			<input type = "text" class = "id_input">
+	 		</div>
+	 		<div class = "pass_area">
+	 			<div class = "pass_kor">
+	 			<input type = "text" class = "pass_input">
+	 		</div>
+	 		
+	 		<div class = "phone_area">
+	 			<div class = "phone"></div>
+	 			<input type = "text" class = "phone_input">
+	 		</div>
+	 		<div class = "email_area">
+	 			<div class = "email_kor">
+	 			</div>
+	 			<input type = "text" class = "email_input">
+	 		</div>
+			<div class = "prefer">
+				<div class = "prefer_kor">
+				</div>
+				<textarea></textarea>
+			</div>	
+		</div>
+		<div class = "submit"> 입력완료</div>
+	</div>
+	
+	<div class = "fixed_area">
+		<div class = "quick_menu">
+		</div>
+		<div class = "calender_menu"></div>
+		<div class = "select_menu"></div>
+		<div class = "online"></div>
+		<div class = "port"></div>
+		<div class = "live"></div>
+	</div>
+
+	 
+	<footer id = "footer">
+	</footer>
+</body>
+</html>
